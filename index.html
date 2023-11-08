@@ -1,67 +1,93 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <title>Formulário</title>
-    <link rel="stylesheet" href="style.css" media="screen">
-</head>
-<body>
-    <header>
-        <h1 id="title">Cadastro</h1>
-        <p id="subti">Coloque sua informações</p>
-    </header>
-    <form action="submit.php">
-        <fieldset class="group">
-            <legend><strong>Dados Pessoais</strong></legend>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+        <title>Cadastro</title>
+    </head>
+
+    <body>  
+        
+        <form>
             <div>
-                <label for="nome"><strong>Nome:</strong> </label>
-                <input type="text" name="nome" id="nome" required>
-            </div>
-            <div>
-                <label for="sobrenome"><strong>Sobrenome:</strong> </label>
-                <input type="text" name="sobrenome" id="sobrenome" required>
-            </div>
-        </fieldset>
-        <div class="campo">
-            <label for="email"><strong>E-mail:</strong> </label>
-            <input type="email" name="email" id="email" required>
-        </div>
-        <div>
-            <label><strong>Gênero:</strong> </label>
-            <input type="radio" name="sex" id="mas" value="masculino" checked><label for="mas">Masculino </label>
-            <input type="radio" name="sex" id="fem" value="feminino"><label for="fem">Feminino </label>
-        </div>
-        <div>
-            <label><strong>Senioridade:</strong> </label>
-            <select name="senioridade" id="senioridade">
-                <option selected>Selecione</option>
-                <option>Junior</option>
-                <option>Pleno</option>
-                <option>Senior</option>
-            </select>
-        </div>
-        <fieldset class="group">
-            <legend><strong>Tecnologias</strong></legend>
-            <div>
-                <label><strong>Seleciona as tecnologias que você sabe</strong></label> <br><br>
-                <input type="checkbox" name="op1" id="op1" value="op1">
-                <label for="op1">HTML</label>
-                <input type="checkbox" name="op2" id="op2" value="op2">
-                <label for="op2">CSS</label>
-            </div>
-        </fieldset>
-        <fieldset>
-            <legend><strong>text</strong></legend>
-            <div>
+                <h1 id="titulo">Formulário</h1>
+                <p id="subtitulo">Coloque suas informações.</p>
                 <br>
-                <label ><strong>Conte sobre sua experiência</strong></label><br>
-                <textarea style="width: 300px;" name="curr" id="curr" cols="30" rows="6"></textarea>
             </div>
-        </fieldset>
-        <input type="button" value="Enviar">
-    </form>
-                                
-</body>
+
+            <fieldset class="grupo">
+
+                <div class="campo">
+                    <label for="nome"><strong>Nome</strong></label>
+                    <input type="text" name="nome" id="nome" required >
+                </div>
+
+
+                <div class="campo">
+                    <label for="sobrenome"><strong>Sobrenome</strong></label>
+                    <input type="text" name="sobrenome" id="sobrenome" required>
+                </div>
+            </fieldset> 
+            
+
+
+            <div class="campo">
+                <label for="email"><strong>Email</strong></label>
+                <input type="email" name="email" id="email" required placeholder="">
+                <label id="data" for="data"><strong>Data de nascimento</strong></label><input type="date" name="data" id="data">
+            </div>
+            
+            
+
+            <div class="campo">
+                <label><strong>Gênero:</strong></label>
+                <label>
+                    <input type="radio" name="sex" value="mas" checked>Masculino
+                </label>
+                <label>
+                    <input type="radio" name="sex" value="fem">Feminino
+                </label>
+
+            </div>
+            <div class="campo">
+                <label for="escolaridade"><strong>Escolaridade</strong></label>
+                <select id="escolaridade" required>
+                  <option selected disabled value="">Selecione</option>
+                  <option>Ensino Fundamental</option>
+                  <option>Ensino Médio</option>
+                  <option>Ensino Superior</option>
+                </select>
+            </div>
+
+            <fieldset class="grupo">
+
+                <div id="check">
+                    <label><strong>Escolha a vaga de interesse:</strong></label><br><br>
+                    <input type="checkbox" id="gerente" name="gerente" value="gerente">
+                    <label for="gerente"> Gerência</label>
+                    <input type="checkbox" id="cont" name="cont" value="Contabilidade">
+                    <label for="cont">Contabilidade</label>
+                    <input type="checkbox" id="marketing" name="marketing" value="Marketing">
+                    <label for="marketing"> Marketing</label>
+                    <input type="checkbox" id="design" name="design" value="Design">
+                    <label for="design"> Design</label>
+
+
+                </div>
+            </fieldset>
+
+            <div class="campo">
+                <br>
+                <label for="experiencia"><strong>Escreva um mini-curriculo: </strong></label>
+                <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+            </div>
+
+            <button class="botao" type="submit" onsubmit="">Concluído</button>            
+
+        </form>
+        
+
+    </body>
+
 </html>
