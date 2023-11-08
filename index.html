@@ -5,30 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <title>Formulário</title>
+    <link rel="stylesheet" href="style.css" media="screen">
 </head>
 <body>
     <header>
-        <h1>Cadastro</h1>
-        <p>Coloque sua informações</p>
+        <h1 id="title">Cadastro</h1>
+        <p id="subti">Coloque sua informações</p>
     </header>
     <form action="submit.php">
-        <fieldset>
+        <fieldset class="group">
+            <legend><strong>Dados Pessoais</strong></legend>
             <div>
-                <label for="nome">Nome: </label>
+                <label for="nome"><strong>Nome:</strong> </label>
                 <input type="text" name="nome" id="nome" required>
             </div>
             <div>
-                <label for="sobrenome">Sobrenome: </label>
+                <label for="sobrenome"><strong>Sobrenome:</strong> </label>
                 <input type="text" name="sobrenome" id="sobrenome" required>
             </div>
         </fieldset>
-        <div>
-            <label for="email">E-mail: </label>
+        <div class="campo">
+            <label for="email"><strong>E-mail:</strong> </label>
             <input type="email" name="email" id="email" required>
         </div>
         <div>
-            <label for="sex">Gênero</label>
+            <label><strong>Gênero:</strong> </label>
+            <input type="radio" name="sex" id="mas" value="masculino" checked><label for="mas">Masculino </label>
+            <input type="radio" name="sex" id="fem" value="feminino"><label for="fem">Feminino </label>
         </div>
+        <div>
+            <label><strong>Senioridade:</strong> </label>
+            <select name="senioridade" id="senioridade">
+                <option selected>Selecione</option>
+                <option>Junior</option>
+                <option>Pleno</option>
+                <option>Senior</option>
+            </select>
+        </div>
+        <fieldset class="group">
+            <legend><strong>Tecnologias</strong></legend>
+            <div>
+                <label><strong>Seleciona as tecnologias que você sabe</strong></label> <br><br>
+                <input type="checkbox" name="op1" id="op1" value="op1">
+                <label for="op1">HTML</label>
+                <input type="checkbox" name="op2" id="op2" value="op2">
+                <label for="op2">CSS</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><strong>text</strong></legend>
+            <div>
+                <br>
+                <label ><strong>Conte sobre sua experiência</strong></label><br>
+                <textarea style="width: 300px;" name="curr" id="curr" cols="30" rows="6"></textarea>
+            </div>
+        </fieldset>
+        <input type="button" value="Enviar">
     </form>
                                 
 </body>
